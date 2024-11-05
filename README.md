@@ -1,7 +1,7 @@
 Gilbert Kristian - 2306274951 - PBP D
 ===
 # Wearwise Mobile
-Wearwise is an innovative mobile app that revolutionizes your clothing shopping experience. Browse a curated selection of high-quality, stylish apparel while enjoying features like virtual try-ons and personalized recommendations. Committed to sustainability, Wearwise partners with eco-friendly brands, allowing you to shop responsibly. 
+Wearwise is an innovative mobile app that revolutionizes your clothing shopping experience. Browse a curated selection of high-quality, stylish apparel while enjoying features like virtual try-ons and personalized recommendations. Committed to sustainability, Wearwise use an eco-friendly materials, allowing you to shop responsibly. 
 
 ## List
 - :books: [Tugas 7](#Tugas-7)
