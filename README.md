@@ -150,7 +150,7 @@ Wearwise is an innovative mobile app that revolutionizes your clothing shopping 
 
     JAWAB :
 
-    `Column` digunakan untuk menyusun _widget_ secara vertikal.(ditampilkan secara berurutan dari atas ke bawah).
+    `Column` digunakan untuk menyusun _widget_ secara vertikal (ditampilkan secara berurutan dari atas ke bawah).
 
     Contoh : 
     
@@ -183,7 +183,7 @@ Wearwise is an innovative mobile app that revolutionizes your clothing shopping 
     JAWAB : 
 
     Elemen _input_ yang digunakan : 
-    - `TextFormField` untuk memasukkan nama teks berupa nama produk, deskripsi produk, dan kuantitas produk ???
+    - `TextFormField` untuk memasukkan nama teks berupa nama produk, deskripsi produk, dan kuantitas produk.
 
     Elemen _input_ lain yang tidak digunakan : 
     - `Checkbox` untuk memilih opsi
