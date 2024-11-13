@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wearwise_mobile/menu.dart';
+import 'package:wearwise_mobile/screens/menu.dart';
 
 
 void main() {

@@ -3,8 +3,9 @@ Gilbert Kristian - 2306274951 - PBP D
 # Wearwise Mobile
 Wearwise is an innovative mobile app that revolutionizes your clothing shopping experience. Browse a curated selection of high-quality, stylish apparel while enjoying features like virtual try-ons and personalized recommendations. Committed to sustainability, Wearwise use an eco-friendly materials, allowing you to shop responsibly. 
 
-## List
+## Direct List
 - :books: [Tugas 7](#Tugas-7)
+- :books: [Tugas 8](#Tugas-8)
 
 ## Tugas-7
 - Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya!
@@ -82,8 +83,8 @@ Wearwise is an innovative mobile app that revolutionizes your clothing shopping 
     10. Menambahkan `MyHomePage({super.key});` sebagai _constructor class_ `MyHomePage`.
     11. Menghapus seluruh class class _`MyHomePageState extends State<MyHomePage>`
     12. Menambahkan tiga tombol dalam `Column` di `Scaffold`:
-        - Lihat Daftar Produk, ikon cari dan warna mengikuti tema.
-        - Tambah Produk, ikon _add_ dan warna mengikuti tema.
+        - Lihat Daftar Produk, ikon cari dan warna biru.
+        - Tambah Produk, ikon _add_ dan warna hijau.
         - Logout, ikon logout dan warna merah.
     13. Membuat ItemHomePage seperti berikut
         ```dart
@@ -130,3 +131,113 @@ Wearwise is an innovative mobile app that revolutionizes your clothing shopping 
         },
     ```
     16. Menjalankan `flutter run` untuk menjalankan aplikasi.
+
+## Tugas-8
+- Apa kegunaan `const` di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan `const`, dan kapan sebaiknya tidak digunakan?
+
+    JAWAB :
+    
+    * Kegunaan `const` di Flutter adalah untuk mendeklarasikan nilai yang bersifat konstan atau tidak akan berubah selama _runtime_ aplikasi.
+
+    * Keuntungan menggunakan `const` adalah dapat mengoptimalkan penggunaan memori dan meningkatkan kinerja dengan karena `const` hanya dibuat sekali dan dapat digunakan kembali.
+    Selain itu, `const` juga dapat mencegah pembuatan ulang _widget_ yang serupa sehingga mempercepat proses _rendering_.
+
+    * Kita sebaiknya menggunakan `const` pada saat kondisi _widget_ atau nilai yang tidak akan berubah atau bersifat bersifat statis dan tidak tergantung pada input dinamis, seperti ikon, gambar.
+
+    * Kita sebaiknya tidak menggunakan  `const` pada saat kondisi _widget_ berisi data yang mungkin berubah seperti data dari API, _input_ pengguna, atau nilai yang dihasilkan dari sebuah _function_.
+
+-  Jelaskan dan bandingkan penggunaan `Column` dan `Row` pada Flutter. Berikan contoh implementasi dari masing-masing _layout widget_ ini!
+
+    JAWAB :
+
+    `Column` digunakan untuk menyusun _widget_ secara vertikal.(ditampilkan secara berurutan dari atas ke bawah).
+
+    Contoh : 
+    
+    ```dart
+    Column(
+    children: <Widget>[
+        Text('Item 1'),
+        Text('Item 2'),
+        Text('Item 3'),
+    ],
+    )
+    ```
+
+    `Row` digunakan untuk menyusun _widget_ secara horizontal (ditampilkan secara berurutan dari kiri ke kanan.)
+
+    Contoh : 
+    
+    ```dart
+    Row(
+    children: <Widget>[
+        Icon(Icons.home),
+        Text('Home'),
+        Icon(Icons.settings),
+    ],
+    )
+    ```
+
+- Sebutkan apa saja elemen _input_ yang kamu gunakan pada halaman _form_ yang kamu buat pada tugas kali ini. Apakah terdapat elemen _input_ Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+
+    JAWAB : 
+
+    Elemen _input_ yang digunakan : 
+    - `TextFormField` untuk memasukkan nama teks berupa nama produk, deskripsi produk, dan kuantitas produk ???
+
+    Elemen _input_ lain yang tidak digunakan : 
+    - `Checkbox` untuk memilih opsi
+    - `Radio` untuk memilih satu opsi dari beberapa opsi yang tersedia.
+    - `Switch` untuk mengubah status antara dua keadaan, seperti mengaktifkan atau menonaktifkan
+    - `DropdownButton` untuk memilih satu opsi dari daftar yang ditampilkan dalam bentuk _dropdown_.
+    
+- Bagaimana cara kamu mengatur tema (_theme_) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+
+    JAWAB : 
+    Menggunakan `MaterialApp` sebagai _widget_ utama, lalu membuat objek `ThemeData` untuk pendefinisian warna dan gaya teks. Saya menggunakan warna ungu sebagai _theme color_ di aplikasi saya.
+
+    ```dart
+    class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+
+    // This widget is the root of your application.
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        title: 'Wearwise Mobile',
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSwatch( primarySwatch: Colors.deepPurple, ).copyWith(secondary: Colors.deepPurple[400]),
+            useMaterial3: true,
+        ),
+        home: MyHomePage(),
+        );
+    }
+    }
+    ```
+
+-  Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+
+    JAWAB :
+
+    Menggunakan widget `Navigator` dan bisa menggunakan metode `push` dan `pop` untuk berpindah antarhalaman.
+
+    Contoh penggunaan di _code_ :
+
+    ```dart
+    ListTile(
+    leading: const Icon(Icons.add_circle_outlined),
+        title: const Text('Tambah Produk'),
+        // Bagian redirection ke ProductEntry
+        onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) => const ProductEntryFormPage(),
+                ));
+        },
+    ),
+    ``` 
+
+
+
+
