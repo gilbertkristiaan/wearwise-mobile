@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wearwise_mobile/screens/list_productentry.dart';
 import 'package:wearwise_mobile/screens/menu.dart';
 import 'package:wearwise_mobile/screens/productentry_form.dart';
 
@@ -64,6 +65,16 @@ class LeftDrawer extends StatelessWidget {
         
             },
           ),
+        ListTile(
+          leading: const Icon(Icons.add_circle_outline_rounded),
+          title: const Text('Daftar Produk'),
+          onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+              );
+          },
+      ),
 
         ],
       ),
