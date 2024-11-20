@@ -6,7 +6,7 @@ Wearwise is an innovative mobile app that revolutionizes your clothing shopping 
 ## Direct List
 - :books: [Tugas 7](#Tugas-7)
 - :books: [Tugas 8](#Tugas-8)
-- :books: [TUgas 9](#Tugas-9)
+- :books: [Tugas 9](#Tugas-9)
 
 ## Tugas-7
 - Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_ dan jelaskan perbedaan dari keduanya!
